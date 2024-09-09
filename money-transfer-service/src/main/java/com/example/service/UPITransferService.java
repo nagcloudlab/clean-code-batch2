@@ -40,13 +40,30 @@ import com.example.repository.AccountRepository;
  * 
  */
 
+// SRP : TransferService should only handle transfer related operations on accounts using UPI
 public class UPITransferService implements TransferService {
 
     private static final Logger logger = Logger.getLogger("mts");
 
+    // ISP ( Interface Segregation Principle )
+    // UPITramsferService seperated from SQL/NoSQLAccountRepository
+    // Implementation(s)
+    // by using AccountRepository interface
     private AccountRepository accountRepository;
 
+    // OCP : open for extension , closed for modification
+    // i.e we can extend the application by adding new features without modifying
+    // existing code
+    // UPITransferService is closed for modification, but open for extension for any
+    // accountRepository
+
+    // LSP : Liskov Substitution Principle
+    // AccountRepository is a super-type of SQLAccountRepository &
+    // NoSQLAccountRepository
     public UPITransferService(AccountRepository accountRepository) {
+        // DIP : Dependency Inversion Principle
+        // UPITransferService is not creating dependency, it's injected by 'third-party'
+        // e.g spring f.w, angular
         this.accountRepository = accountRepository; // dependency injection
         logger.info(
                 accountRepository.getClass().getName() + "-accountRepository injected to UPITransferService instance!");

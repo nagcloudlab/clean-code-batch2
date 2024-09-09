@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "rxjs": "^7.8.1"
+  },
+  "name": "design-patterns-in-javascript",
+  "version": "1.0.0",
+  "main": "observer_async.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

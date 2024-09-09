@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 
 import com.example.model.Account;
 
+// SRP : AccountRepository should only handle account related operations on NoSQL database
 public class NoSqlAccountRepository implements AccountRepository {
 
     private static final Logger logger = Logger.getLogger("mts");
