@@ -40,3 +40,12 @@ Implement concrete strategies as classes that implement this interface.
 
 1. It allows you to replace the algorithm of an object at runtime.
 2. It isolates the implementation details of an algorithm from the code that uses it.
+
+
+pattern : chain of responsibility
+--------------------------------------------------------
+
+### Intent
+
+Avoid coupling the sender of a request to its receiver 
+by giving more than one object a chance to handle the request.

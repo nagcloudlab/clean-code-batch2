@@ -1,60 +1,74 @@
+
+// SOLID Principles
+
+
 //---------------------------------------
 // Wheel abstration
 //---------------------------------------
+
+interface Wheel {
+    rotate(): void;
+}
+
 //---------------------------------------
 // MRFWheel module
 //---------------------------------------
-var MRFWheel = /** @class */ (function () {
-    function MRFWheel() {
+
+class MRFWheel implements Wheel {
+    constructor() {
         console.log('MRFWheel instance created...');
     }
-    MRFWheel.prototype.rotate = function () {
+    rotate() {
         console.log('MRFWheel rotating...');
-    };
-    return MRFWheel;
-}());
+    }
+}
+
 //---------------------------------------
 // CEATWheel module
 //---------------------------------------
-var CEATWheel = /** @class */ (function () {
-    function CEATWheel() {
+
+class CEATWheel implements Wheel {
+    constructor() {
         console.log('CEATWheel instance created...');
     }
-    CEATWheel.prototype.rotate = function () {
+    rotate() {
         console.log('CEATWheel rotating...');
-    };
-    return CEATWheel;
-}());
+    }
+}
+
 //---------------------------------------
 // car module
 //---------------------------------------
+
 // SINGLE RESPONSIBILITY PRINCIPLE
 // OPEN/CLOSED PRINCIPLE
 // LISKOV SUBSTITUTION PRINCIPLE
 // INTERFACE SEGREGATION PRINCIPLE
 // DEPENDENCY INVERSION PRINCIPLE
-var Car = /** @class */ (function () {
+
+class Car {
     // private wheel: Wheel;
     // constructor(wheel: Wheel) {
     //     this.wheel = wheel;
     //     console.log('Car instance created...');
     // }
-    function Car(wheel) {
-        this.wheel = wheel;
+    constructor(private wheel: Wheel) {
         console.log('Car instance created...');
     }
-    Car.prototype.setWheel = function (wheel) {
+    setWheel(wheel: Wheel) {
         this.wheel = wheel;
-    };
-    Car.prototype.move = function () {
+    }
+    move() {
         //let wheel = new MRFWheel();
         this.wheel.rotate();
         console.log('Car moving...');
-    };
-    return Car;
-}());
+    }
+}
+
+
 //---------------------------------------
-var car = new Car(new MRFWheel());
+
+let car = new Car(new MRFWheel());
 console.log();
 car.move();
 console.log();

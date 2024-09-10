@@ -1,6 +1,5 @@
 
 
-
 // Subject
 class Door {
     listeners = [];
@@ -24,6 +23,7 @@ class Door {
         }
     }
 }
+
 
 // Observer
 class Light {
