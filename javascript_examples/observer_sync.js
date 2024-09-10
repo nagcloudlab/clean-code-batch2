@@ -24,7 +24,6 @@ class Door {
     }
 }
 
-
 // Observer
 class Light {
     on(event) {
