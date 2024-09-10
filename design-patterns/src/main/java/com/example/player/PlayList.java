@@ -28,9 +28,9 @@ public class PlayList {
     }
 
     public Track getNextTrack() {
-//        Track track= tracks.get(0);
-//        tracks.remove(0);
-//        return track;
+        // Track track= tracks.get(0);
+        // tracks.remove(0);
+        // return track;
         return nextTrackStrategy.getNextTrack(tracks);
     }
 
