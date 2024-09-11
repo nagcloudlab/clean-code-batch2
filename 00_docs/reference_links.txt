@@ -1,3 +1,16 @@
 
+Trainer's notes
 https://nagcloudlab.notion.site/Clean-Code-3040fafcb6984c08bd48c4ec7bf81d62?pvs=4
+
+https://nagcloudlab.notion.site/Clean-Code-a660da200bcc44c3b45969708c4eacab?pvs=4
+
+
+design patterns & refactoring
 https://refactoring.guru/
+
+Why exceptions over eror codes?
+https://docs.oracle.com/javase/tutorial/essential/exceptions/advantages.html
+
+
+Why code smells?
+https://opensoul.org/2012/05/23/why-our-code-smells/

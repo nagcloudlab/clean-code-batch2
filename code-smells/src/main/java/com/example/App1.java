@@ -1,5 +1,22 @@
 package com.example;
 
+abstract class Employee {
+    public abstract double payAmount();
+}
+
+class Engineer extends Employee {
+    public double payAmount() {
+        return 1000.0 * 0.2;
+    }
+}
+
+class SalesMan extends Employee {
+    public double payAmount() {
+        return 1000.0 * 0.1;
+    }
+}
+
+
 public class App1 {
     public static void main(String[] args) {
 
